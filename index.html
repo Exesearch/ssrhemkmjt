@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Login and Registration form</title>
+	<link rel="stylesheet" href="style.css">
+<head>
+<body>
+	<h1>Treaure Hunt</h1>
+	<div class="login-page">
+	<div class="form">
+		<!--form for registration form-->
+		<form class= "register-form">
+		<input type="text" placeholder = "username"/>
+		<input type="text" placeholder = "password"/>
+		<input type="text" placeholder = "email ID"/>
+		<button>Create</button>
+		<p class="message">Already Registered?<a href="#">Login</a>
+		</p>
+		</form>
+		
+		<!--form for login form-->
+		<form class="login-form">
+		<input type="text" placeholder = "username"/>
+		<input type="text" placeholder = "password"/>
+		<button>Login</button>
+		<p class="message">Not Registered?<a href="#">Register</a>
+		</form>
+		
+		<!--code to switch between login and registration form-->
+		<script src='https://code.jquery.com/jquery-3.4.1.min.js'>
+		</script>
+		
+		<script>
+		$('.message a').click(function(){
+		$('form').animate({height:"toggle",opacity:"toggle"},"slow");
+		});
+		</script>
+		
+	</div>
+	</div>
+</body
+</html>
+
