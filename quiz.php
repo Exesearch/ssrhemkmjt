@@ -6,7 +6,6 @@
     <title>EXESEARCH</title>
 </head>
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript" href="quiz.js"></script>
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <body>
     <style>
         #frame001 {
@@ -28,14 +27,14 @@
             text-align: center;
         }
 
-        .button001 {
+        .submitbutton {
             background-color: blue;
             color: white;
             border-radius: 10px;
             padding: 5px;
             cursor: pointer;
         }
-        .button003 {
+        .nextbutton {
             background-color: blue;
             color: white;
             border-radius: 10px;
@@ -52,15 +51,14 @@
         <div id="color001">
             <div id="center001">
                 <h2><strong>EXESEARCH QUIZ</strong></h2>
-<div class="questions">Question 1: <input id="input001" size="15" /><text class="button002" id="check001"></text>
-</div><div class="questions">Question 2: <input id="input002" size="15" /><text class="button002" id="check002"></text>
-</div><div class="questions">Question 3: <input id="input003" size="15" /> <text class="button002" id="check003"></text>
-</div><div class="questions">Question 4: <input id="input004" size="15" /><text class="button002" id="check004"></text>
-</div><div class="questions">Question 5: <input id="input005" size="15" /><text class="button002" id="check005"></text>
+<div class="questions">Question 1: Which building in the University of Exeter has a tradition of putting a lit Christmas tree on top of it in December?<input id="input001" size="15" /><text class="button002" id="check001"></text><img src="PBtree.png" alt="Physics Building Christmas Tree">
+</div><div class="questions">Question 2: To what group does the University of Exeter belong?<input id="input002" size="15" /><text class="button002" id="check002"></text>
+</div><div class="questions">Question 3: What is the University of Exeter students' radio station called?<input id="input003" size="15" /> <text class="button002" id="check003"></text>
+</div><div class="questions">Question 4: To promote Employability, the University of Exeter promotes something called The _______ Award.<input id="input004" size="15" /><text class="button002" id="check004"></text>
+</div><div class="questions">Question 5: In what year did University College of the South West of England receive its Royal Charter and become the University of Exeter?<input id="input005" size="15" /><text class="button002" id="check005"></text>
   <p id="demo"></p>
-  </div>
-            <div id="disappear001"><div id="center001"><button class="button001" onclick="submit001()">Submit</button></div></div><br />
-            <div id="center001"><button class="button003" onclick="submit003()">Next</button></div><br />
+  </div><div id="center001"><button class="submitbutton" onclick="submitclick()">Submit</button></div><br/>
+            <div id="disappear001"><div id="center001"><button class="nextbutton" onclick="submit003()">Next</button></div></div><br/>
             <div id="center001"><p id="message001"></p><p id="reload001"></p></div>
                 <br />
             <br />
@@ -78,77 +76,77 @@ function getLocation() {
   }
 }
 
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-}
     $questions = $('.questions');
     $('.questions').fadeOut();
     $questions.hide();
     var totalQuestions = $('.questions').size();
     var currentQuestion = 0;
-    $('.button003').hide();
+    $('.nextbutton').hide();
     $($questions.get(currentQuestion)).fadeIn();
-        var g;
-        var h;
-        var i;
-        var j;
-        var k;
-        function submit001() {
+        var g = 0;
+        var h = 0;
+        var i = 0;
+        var j = 0;
+        var k = 0;
+        function submitclick() {
             b = input001.value;
             c = input002.value;
             d = input003.value;
             e = input004.value;
             f = input005.value;
-            if (b == "Answer1" || b == "answer1") {
-                g = 1;
+            if (b == "Physics Building" || b == "physics building" || b == "physics" || b == "Physics") {
+                g += 1;
                 input001.value = b;
                 check001.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input001.value = b;
                 check001.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                $('.button002').fadeIn();
             }
 
-            if (c == "Answer2" || c == "answer2") {
-                h = 1;
+            if (c == "The Russell Group" || c == "the russell group" || c == "russell group" || c == "Russell Group") {
+                h += 1;
                 input002.value = c;
-                $()
                 check002.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input002.value = c;
                 check002.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                $('.button002').fadeIn();
             }
 
-            if (d == "Answer3" || d == "answer3") {
-                i = 1;
+            if (d == "Xpression FM" || d == "Xpression") {
+                i += 1;
                 input003.value = d;
                 check003.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input003.value = d;
                 check003.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                $('.button002').fadeIn();
             }
 
-            if (e == "Answer4" || e == "answer4") {
-                j = 1;
+            if (e == "Exeter" || e == "exeter") {
+                j += 1;
                 input004.value = e;
                 check004.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input004.value = e;
                 check004.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                $('.button002').fadeIn();
             }
 
-            if (f == "Answer5" || f == "answer5") {
-                k = 1;
+            if (f == "1955") {
+                k += 1;
                 input005.value = f;
                 check005.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input005.value = f;
                 check005.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                $('.button002').fadeIn();
             }
             if (g == 1)
             {
-              message001.innerHTML = "Here is your first location!"
-              $('.button003').fadeIn();
+              message001.innerHTML = "Here is your first location! \n Clue 1: I am standing at the bottom of a slope on the University of Exeter Streatham Campus and I am looking up and I can see a silver looking building with 'Students Guild' written on it and as I approach it, there seems to be a club called 'The Lemon Grove' there. Which building am I walking towards?"
+              $('.nextbutton').fadeIn();
               $('.button002').fadeIn();
 
             }
@@ -156,16 +154,15 @@ function showPosition(position) {
             if (h == 1)
             {
               message001.innerHTML = "Here is your second location!"
-              $('#demo').fadeIn();
-              $('.button003').fadeIn();
+              $('.nextbutton').fadeIn();
               $('#message001').fadeIn();
               $('.button002').fadeIn();
 
             }
-            if( i == 1)
+            if(i == 1)
             {
               message001.innerHTML = "Here is your third location!"
-              $('.button003').fadeIn();
+              $('.nextbutton').fadeIn();
               $('#message001').fadeIn();
               $('.button002').fadeIn();
 
@@ -173,7 +170,7 @@ function showPosition(position) {
             if(j==1)
             {
               message001.innerHTML = "Here is your fourth location!"
-              $('.button003').fadeIn();
+              $('.nextbutton').fadeIn();
               $('#message001').fadeIn();
               $('.button002').fadeIn();
 
@@ -181,28 +178,28 @@ function showPosition(position) {
             if(k==1)
             {
               message001.innerHTML = "Here is your final location!"
-              $('.button003').fadeIn();
+              $('.nextbutton').fadeIn();
               $('#message001').fadeIn();
               $('.button002').fadeIn();
 
             }
 
-            if (g == 1 && h == 1 && i == 1 && j == 1 && k == 1) {
+            if (g == 5 && h == 4 && i == 3 && j == 2 && k == 1) {
                 message001.innerHTML = "Congratulation! You have successfully finished this quiz.";
                 disappear001.innerHTML = "";
-                reload001.innerHTML = "<div id=center001><button class=button001 onclick=repeat001()>Repeat</button></div>";
+                alert("YOU WON");
+                reload001.innerHTML = "<div id=center001><button class=submitbutton onclick=repeat001()>Repeat</button></div>";
             }
         }
 
             function repeat001() {
                 location.reload();
             }
-            $('.button003').click(function () {
-
-      $('.button003').fadeOut();
+      $('.nextbutton').click(function submit003() {
+      $('.nextbutton').fadeOut();
       $('#message001').fadeOut();
-      $('.button002').hide();
-     $($questions.get(currentQuestion)).fadeOut(function () {
+      $('.button002').fadeOut();
+      $($questions.get(currentQuestion)).fadeOut(function () {
 
 
         currentQuestion = currentQuestion + 1;
@@ -211,6 +208,7 @@ function showPosition(position) {
         if (currentQuestion == totalQuestions) {
 
             alert("YOU WON");
+            $('#message001').fadeIn();
 
         } else {
 
