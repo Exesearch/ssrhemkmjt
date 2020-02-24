@@ -21,34 +21,36 @@ $conn->close();
  <!DOCTYPE html>
  <html>
    <head>
-     <link href="CSS/style_sheet.css" rel='stylesheet' type='text/css'/>
+     <link href="./style_sheet.css" rel='stylesheet' type='text/css'/>
      <style>
      .leaderBoard table{
        margin-left: 20%;
        height: 200px;
-     }
-
-     .leaderBoard h1 {
-       text-align: center;
-       font-size: 70px;
+       color:#adde82;
+       font-size:20px;
      }
 
      h2 {
-       text-align: center;
-       font-size: 50px;
+      display:block;
+     	color:#adde82;
+     	font-size:46px;
+     	text-align:center;
+     	font-family: 'Muli', sans-serif;
+     	margin-top:66px;
      }
+
 
      </style>
    </head>
    <body>
-     <a style = "font-family:copperplate;font-size:50px;font-style:oblique;" href="./index.php">Treasure Hunt</a>
+     <a style = "font-family:copperplate;font-size:50px;font-style:oblique;" href="./index.php">EXESEARCH</a>
      <ul class="topnav">
        <li><a href="./challenge.html">Challenge</a></li>
        <li><a href="./scoreBoard.php">Scoreboard</a></li>
      </ul>
      <div class="leaderBoard">
        <h1>Score Boad</h1>
-       <table border="1">
+       <table border="3">
          <tr><th width=500px>User name</th><th width=150px>Score</th></tr>
 
          <?php
