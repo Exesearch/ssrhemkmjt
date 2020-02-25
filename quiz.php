@@ -113,7 +113,7 @@
                 check001.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input001.value = b;
-                check001.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                check001.innerHTML = "<text class=button002>" + "✖ Oops Try Again" + "</text>";
                 $('.button002').fadeIn();
             }
 
@@ -123,7 +123,7 @@
                 check002.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input002.value = c;
-                check002.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                check002.innerHTML = "<text class=button002>" + "✖ Oops Try Again" + "</text>";
                 $('.button002').fadeIn();
             }
 
@@ -133,17 +133,17 @@
                 check003.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input003.value = d;
-                check003.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                check003.innerHTML = "<text class=button002>" + "✖ Oops Try Again" + "</text>";
                 $('.button002').fadeIn();
             }
 
             if (e == "Exeter" || e == "exeter") {
                 j += 1;
                 input004.value = e;
-                check004.innerHTML = "<text class=button002>" + "✔" + "</text>";
+                check004.innerHTML = "<text class=button002>" + "✔ " + "</text>" ;
             } else {
                 input004.value = e;
-                check004.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                check004.innerHTML = "<text class=button002>" + "✖ Oops Try Again" + "</text>";
                 $('.button002').fadeIn();
             }
 
@@ -153,7 +153,7 @@
                 check005.innerHTML = "<text class=button002>" + "✔" + "</text>";
             } else {
                 input005.value = f;
-                check005.innerHTML = "<text class=button002>" + "✖" + "</text>";
+                check005.innerHTML = "<text class=button002>" + "✖ Oops Try Again" + "</text>";
                 $('.button002').fadeIn();
             }
             if (g == 1)
@@ -161,9 +161,9 @@
               message001.innerHTML = "Here is your first location! <br/> Clue 1: I am standing at the bottom of a slope on the University of Exeter Streatham Campus and I am looking up and I can see a silver looking building with 'Students Guild' written on it and as I approach it, there seems to be a club called 'The Lemon Grove' there. Which building am I walking towards?</br> (CLUE IS FOR CORNWALL HOUSE, BUT GPS IS FOR HARRISON BUILDING)"
               $('.button002').fadeIn();
               $('.geoclicker').fadeIn();
-              targetLat = 50.737545;
-              targetLong = -3.532975;
-              radius = 50;
+              targetLat = 50.7377377;
+              targetLong = -3.5326077;
+              radius = 80;
 
             }
 
@@ -173,9 +173,9 @@
               $('#message001').fadeIn();
               $('.button002').fadeIn();
               $('.geoclicker').fadeIn();
-              targetLat = 50.735437;
-              targetLong = -3.534477;
-              radius = 70;
+              targetLat = 50.7354778 ;
+              targetLong = -3.5338726;
+              radius = 80;
 
             }
             if(i == 1)
@@ -184,8 +184,8 @@
               $('#message001').fadeIn();
               $('.button002').fadeIn();
               $('.geoclicker').fadeIn();
-              targetLat =50.735793;
-              targetLong = -3.535227;
+              targetLat =50.7354642;
+              targetLong = -3.5345377;
               radius = 70;
 
             }
@@ -195,20 +195,20 @@
               $('#message001').fadeIn();
               $('.button002').fadeIn();
               $('.geoclicker').fadeIn();
-              targetLat = 50.735437;
-              targetLong = -3.534477;
-              radius = 50;
+              targetLat = 50.7358581;
+              targetLong = -3.5352566;
+              radius = 70;
 
             }
             if(k==1)
             {
-              message001.innerHTML = "Here is your final location! <br/> Clue 5: (NEWMAN BUILDING)"
+              message001.innerHTML = "Here is your final location! <br/> Clue 5:(NEWMAN BUILDING)"
               $('#message001').fadeIn();
               $('.button002').fadeIn();
               $('.geoclicker').fadeIn();
-              targetLat = 50.736367;
-              targetLong = -3.535963;
-              radius = 50;
+              targetLat = 50.7365371;
+              targetLong = -3.5358735;
+              radius = 70;
 
             }
 
