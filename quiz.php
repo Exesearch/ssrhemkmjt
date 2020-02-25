@@ -202,7 +202,7 @@
             }
             if(k==1)
             {
-              message001.innerHTML = "Here is your final location! <br/> Clue 5:"
+              message001.innerHTML = "Here is your final location! <br/> Clue 5: (NEWMAN BUILDING)"
               $('#message001').fadeIn();
               $('.button002').fadeIn();
               $('.geoclicker').fadeIn();
