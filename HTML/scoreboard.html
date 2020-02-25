@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+   
+    <!--Metadata-->
+	<meta charset="utf-8">
+    <meta name="description" content="Scoreboard Page">
+    <meta name="author" content="Kenta">
+	<meta name="contributors" content="Yashaswi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    
+	<link href="./style_sheet.css" rel='stylesheet' type='text/css'/>
+    
+	<style>
+     .leaderBoard table{
+       margin-left: 20%;
+       height: 200px;
+       color:#adde82;
+       font-size:20px;
+     }
+
+     h2 {
+      display:block;
+     	color:#adde82;
+     	font-size:46px;
+     	text-align:center;
+     	font-family: 'Muli', sans-serif;
+     	margin-top:66px;
+     }
+	 
+	 	ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #333;
+		}
+
+		li {
+		  float: left;
+		}
+
+		li a {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		}
+
+		li a:hover {
+		  background-color: #111;
+		}
+		
+		.active {
+  background-color: #4CAF50;
+}
+
+     </style>
+   </head>
+   <body>
+   
+   
+     <a style = "font-family:copperplate;font-size:50px;font-style:oblique;" href="./index.php">EXESEARCH</a>
+     
+	 
+	 <!--Yashaswi added this navigation bar-->
+	 <ul class="topnav">
+    <li><a href="profile.html">Profile</a></li>
+	<li><a href="quiz.html">Quiz</a></li>
+    <li><a href="scoreboard.html">Scoreboard</a></li>
+	<li><a href="faq.html">FAQ</a></li>
+     </ul>
+	 
+     <div class="leaderBoard">
+       <h1>Score Boad</h1>
+       <table border="3">
+         <tr><th width=500px>User name</th><th width=150px>Score</th></tr>
+
+         <?php
+         foreach($rows as $row){
+           ?>
+           <tr>
+             <td><?php echo $row['username']; ?></td>
+             <td><?php echo htmlspecialchars($row['score']); ?></td>
+           </tr>
+           <?php
+         }
+         ?>
+       </table>
+     </div>
+     <h2> Rewards</h2>
+
+   </body>
+ </html>
