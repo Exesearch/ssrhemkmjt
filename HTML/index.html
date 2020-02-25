@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Login</title>
+    <link rel="stylesheet" href="style.css">
+	
+	<!--Metadata-->
+	<meta charset="utf-8">
+    <meta name="description" content="Login and Registration Page">
+    <meta name="author" content="Ridita">
+	<meta name="contributors" content="Yashaswi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<h1>Treaure Hunt</h1>
+<body>
+
+<div class="login-page">
+    <div class="form">
+      
+	  <!--form for registration form-->
+        <form class= "register-form">
+            <input type="text" placeholder = "Forename"/>
+            <input type="text" placeholder = "Surname"/>
+            <input type="text" placeholder = "username"/>
+            <input type="text" placeholder = "password"/>
+            <input type="text" placeholder = "emailID"/>
+            <button>Create</button>
+            <p class="message">Already Registered? <a href="#">Login</a>
+            </p>
+        </form>
+
+        <!--form for login form-->
+        <form class="login-form">
+            <input type="text" placeholder = "username"/>
+            <input type="text" placeholder = "password"/>
+            <p class="message">Not Registered? <a href="#">Register</a>
+        </form>
+		
+		<!--Yashaswi added this form action-->
+		<form action="quiz.html">
+			<input type="submit" value="Login" />
+		</form>
+
+        <!--code to switch between login and registration form-->
+        <script src='https://code.jquery.com/jquery-3.4.1.min.js'>
+        </script>
+
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+            });
+        </script>
+
+    </div>
+</div>
+</body
+</html>
