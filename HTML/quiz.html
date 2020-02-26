@@ -131,18 +131,17 @@
         var j = 0;
         var k = 0;
 
-        var distance;
-        var userLat;
-        var userLatRadians;
-        var userLong;
-        var userLongRadians;
-        var targetLatRadians;
-        var targetLongRadians;
-        var longDifference;
-
+	var distance;			//Distance between user location and target
+	var userLat;			//User location latitude
+	var userLatRadians;		//In radians
+	var userLong;			//User location longitude
+	var userLongRadians;		//In radians
+	var targetLat = 0		//The target latitude
+	var targetLatRadians;		//In radians
+	var targetLong = 0;		//The target longitude
+	var targetLongRadians;		//In radians
+	var longDifference;		//The difference between user and target longitude
         var radius = 0;
-        var targetLat = 0;
-        var targetLong = 0;
 
         var x = document.getElementById("locations");
 
@@ -297,46 +296,42 @@
 
 });
 
-
-
-    function checkPermission() {
-    	if (navigator.geolocation) {
-    		//Ask the user for permission to use location.
-    		window.location.href = 'PROFILE PAGE';
-    	} else {
-    		//If refused, take to another page.
-    		window.location.href = 'GPS REFUSAL PAGE';
-    	}
-    }
-
     function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-      }
+	//Written by: Nell, modified by: Jacob
+	//Check if geolocation is "true" i.e. enabled
+	if (navigator.geolocation) {
+		//If so, get the current user location and check against target
+        	navigator.geolocation.getCurrentPosition(showPosition);
+      	} else {
+        	x.innerHTML = "Geolocation is not supported by this browser.";
+      	}
     }
 
     function showPosition(position) {
-      userLat = position.coords.latitude;
-    	userLong = position.coords.longitude;
+	//Written by: Nell, modified by: Jacob
+	userLat = position.coords.latitude;
+	userLong = position.coords.longitude;
 
-      userLatRadians = toRad(userLat);
-      targetLatRadians = toRad(targetLat);
-      longDifference = toRad(targetLong - userLong);
-      earthRadius = 6371000;
-      distance = Math.acos( Math.sin(userLatRadians)*Math.sin(targetLatRadians)
+	//Find the distance between target and current position
+	//User spherical law of cosines - should be accurate to a few metres
+	    
+	userLatRadians = toRad(userLat);
+      	targetLatRadians = toRad(targetLat);
+      	longDifference = toRad(targetLong - userLong);
+      	earthRadius = 6371000;
+      	distance = Math.acos( Math.sin(userLatRadians)*Math.sin(targetLatRadians)
     			+ Math.cos(userLatRadians)*Math.cos(targetLatRadians)
     			*Math.cos(longDifference)) * earthRadius;
 
-          if (distance <= radius) {
-        		x.innerHTML ="Success!" ;
-            $('#locations').fadeIn();
-            $('.nextbutton').fadeIn();
-        	} else {
-        		x.innerHTML ="Failure!";
-            $('#locations').fadeIn();
-        	}
+	//Check that it is within range
+      	if (distance <= radius) {
+        	x.innerHTML ="Success!" ;
+           	$('#locations').fadeIn();
+            	$('.nextbutton').fadeIn();
+        } else {
+        	x.innerHTML ="Failure!";
+            	$('#locations').fadeIn();
+        }
     }
 
     function toRad(Value) {
