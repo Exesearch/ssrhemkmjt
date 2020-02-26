@@ -1,8 +1,10 @@
 <?php
-/*
-This file is for creating a table to store user informtaion.
-Username, password, and salt which is generated randomly for each user to reinforce security.
+/**
+* This file creates tables that are needed for treasure hunt game.
+* @author kenta
+*
 */
+
 require('./connection.php');
 
 $sql = [
@@ -20,7 +22,7 @@ $sql = [
   "CREATE TABLE IF NOT EXISTS users (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     fName VARCHAR(45) NOT NULL,
-    sName VARCHAR(45) NOT NULL,
+    lName VARCHAR(45) NOT NULL,
     username VARCHAR(45) NOT NULL,
     password VARCHAR(45) NOT NULL,
     email VARCHAR(45) NOT NULL,

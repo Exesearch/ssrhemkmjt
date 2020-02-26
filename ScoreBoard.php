@@ -22,6 +22,14 @@ $conn->close();
  <html>
    <head>
      <link href="./style_sheet.css" rel='stylesheet' type='text/css'/>
+     
+     <!--Metadata-->
+	<meta charset="utf-8">
+    <meta name="description" content="Scoreboard Page">
+    <meta name="author" content="Kenta">
+	<meta name="contributors" content="Yashaswi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+     
      <style>
      .leaderBoard table{
        margin-left: 20%;
