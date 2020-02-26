@@ -1,8 +1,6 @@
 <?php
-/*
-This file is for creating a table to store user informtaion.
-Username, password, and salt which is generated randomly for each user to reinforce security.
-*/
+
+
 require('./connection.php');
 
 $sql = [
