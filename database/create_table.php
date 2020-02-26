@@ -20,7 +20,7 @@ $sql = [
   "CREATE TABLE IF NOT EXISTS users (
     ID INT PRIMARY KEY AUTO_INCREMENT,
     fName VARCHAR(45) NOT NULL,
-    sName VARCHAR(45) NOT NULL,
+    lName VARCHAR(45) NOT NULL,
     username VARCHAR(45) NOT NULL,
     password VARCHAR(45) NOT NULL,
     email VARCHAR(45) NOT NULL,
