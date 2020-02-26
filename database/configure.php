@@ -1,6 +1,8 @@
 <?php
-/*
-This file keeps information which is needed to access database.
+/**
+* This file keeps information which is needed to access database.
+* @author kenta
+*
 */
 define("server","");
 define("user", "");
