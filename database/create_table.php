@@ -1,5 +1,9 @@
 <?php
-
+/**
+* This file creates tables that are needed for treasure hunt game.
+* @author kenta
+*
+*/
 
 require('./connection.php');
 
