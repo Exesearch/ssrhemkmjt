@@ -63,8 +63,8 @@ $conn->close();
    <body>
      <h align="center">EXESEARCH</h>
      <ul class="topnav">
-       <li><a href="./quiz.html">Challenge</a></li>
-       <li><a href="./ScoreBoard.php">Scoreboard</a></li>
+       <li><a href="./quiz.html">Quiz</a></li>
+       <li><a href="./scoreboard.php">Scoreboard</a></li>
      </ul>
      <div class="leaderBoard">
        <h1>Score Boad</h1>
