@@ -1,14 +1,218 @@
-/*
-This is the css for the login and registation page
-Author: Ridita and Sophie
-*/
+@import "compass/css3";
+/*Static table example used for this website courtesy of https://colorlib.com/wp/template/fixed-header-table/*/
+* {
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: sans-serif;
+}
+
+/* Scrollbar for table.*/
+.js-pscroll {
+  position: relative;
+  overflow: hidden;
+}
+
+.table1 .ps__rail-y {
+  width: 9px;
+  background-color: transparent;
+  opacity: 1 !important;
+  right: 5px;
+}
+
+.table1 .ps__rail-y::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #ebebeb;
+  border-radius: 5px;
+  width: 100%;
+  height: calc(100% - 30px);
+  left: 0;
+  top: 15px;
+}
+
+.table1 .ps__rail-y .ps__thumb-y {
+  width: 100%;
+  right: 0;
+  background-color: transparent;
+  opacity: 1 !important;
+}
+
+.table1 .ps__rail-y .ps__thumb-y::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #cccccc;
+  border-radius: 5px;
+  width: 100%;
+  height: calc(100% - 30px);
+  left: 0;
+  top: 15px;
+}
+
+/*Table formatting*/
+
+.limiter {
+  width: 1366px;
+  margin: 0 auto;
+}
+
+.container-table1 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.wrap-table1 {
+  width: 1170px;
+}
+
+.table1 {
+  background-color: #fff;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+
+.column1 {
+  width: 5%;
+  padding-left: 40px;
+}
+
+.column2 {
+  width: 13%;
+}
+
+.column3 {
+  width: 22%;
+}
+
+.table1-head th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.table1-body td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+/*Fixes header of table*/
+.table1 {
+  position: relative;
+  padding-top: 60px;
+}
+
+.table1-head {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.table1-body {
+  max-height: 450px;
+  overflow: auto;
+}
+
+.table1.ver1 th {
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  color: #9ae0aa;
+  line-height: 1.4;
+  background-color: #155724;
+}
+
+.table1.ver1 td {
+  font-family: 'Muli', sans-serif;
+  font-size: 15px;
+  color: #1c7330;
+  line-height: 1.4;
+}
+
+.table1.ver1 .table1-body tr:nth-child(even) {
+  background-color: #f2fbf4;
+}
+
+.table1.ver1 {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.table1.ver1 .ps__rail-y {
+  right: 5px;
+}
+
+.table1.ver1 .ps__rail-y::before {
+  background-color: #ebebeb;
+}
+
+.table1.ver1 .ps__rail-y .ps__thumb-y::before {
+  background-color: #cccccc;
+}
+
+/*Quiz page formatting*/
 
 body{
 	background-image: linear-gradient(rgba(0,50,0,0.6),rgba(0, 0, 0, 0.5)),url(treasure.jfif);
 	height:100vh;
-	background-size:cover;
+	background-size: cover;
 	background-position:center;
 }
+
+#frame001 {
+	background-color: #a8efab75;
+	width: 80%;
+	height: auto;
+	padding: 5px;
+	position: relative;
+	z-index:1;
+	margin:0 auto 100px;
+	text-align:center;
+}
+
+#color001 {
+		color: #d2f2d3;
+		font-family: 'Muli', sans-serif;
+		font-size: large;
+		text-align: left;
+}
+
+#center001 {
+		text-align: center;
+}
+
+img {
+	width: 70%;
+	max-width: 500px;
+	/* padding:5px; */
+	border: 10px solid;
+	border-image: radial-gradient(#aee250, #295232) 1;
+	border-radius: 0px;
+	/* background-color: #e6e6e6; */
+}
+
 h1{
 	display:block;
 	color:#adde82;
@@ -17,6 +221,18 @@ h1{
 	font-family: 'Muli', sans-serif;
 	margin-top:66px;
 }
+
+h2{
+	display:block;
+	color:#adde82;
+	font-size:36px;
+	text-align:center;
+	font-family: 'Muli', sans-serif;
+	margin-top:66px;
+}
+
+/*Login/registration page formatting*/
+
 .login-page{
 	width: 360px;
 	padding: 10% 0 0;
@@ -76,5 +292,108 @@ h1{
 
 .form .register-form{
 	display:none;
+
+/*Buttons for quiz page*/
+
+.submitbutton {
+			background-color: blue;
+			color: white;
+			border-radius: 10px;
+			padding: 5px;
+			cursor: pointer;
+	}
+
+.nextbutton {
+			background-color: blue;
+			color: white;
+			border-radius: 10px;
+			padding: 5px;
+			cursor: pointer;
+	}
+
+.button002 {
+			width: 10px;
+			height: 10px;
+	}
+
+
+/*leaderBoard table*/
+
+.leaderBoard {
+	margin: 1em 0;
+	min-width: 300px;
+
+	tr {
+		border-top: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+
+	th {
+		display: none;
+	}
+
+	td {
+		display: block;
+
+		&:first-child {
+			padding-top: .5em;
+		}
+
+		&:last-child {
+	    padding-bottom: .5em;
+	  }
+
+		&:before {
+			content: attr(data-th)": ";
+			font-weight: bold;
+
+			width: 6.5em;
+			display: inline-block;
+
+			@media (min-width: $breakpoint-alpha) {
+				display: none;
+			}
+		}
+	}
+
+	  th, td {
+	    text-align: left;
+
+	    @media (min-width: $breakpoint-alpha) {
+	      display: table-cell;
+	      padding: .25em .5em;
+
+	      &:first-child {
+	        padding-left: 0;
+	      }
+
+	      &:last-child {
+	        padding-right: 0;
+	      }
+	    }
+
+	  }
+
+
+	}
+
+	.leaderBoard {
+	  background: #34495E;
+	  color: #fff;
+	  border-radius: .4em;
+	  overflow: hidden;
+	  tr {
+	    border-color: lighten(#34495E, 10%);
+	  }
+	  th, td {
+	    margin: .5em 1em;
+	    @media (min-width: $breakpoint-alpha) {
+	      padding: 1em !important;
+	    }
+	  }
+	  th, td:before {
+	    color: #dd5;
+	  }
+	}
 
 }
