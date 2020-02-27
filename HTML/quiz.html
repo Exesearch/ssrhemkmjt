@@ -6,10 +6,12 @@
 	<meta charset="utf-8">
     <meta name="description" content="Quiz Page">
     <meta name="author" content="Jacob">
-	<meta name="contributors" content="Nell,Yashaswi">
+	<meta name="contributors" content="Nell,Sophie,Yashaswi">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+	<!--Icons courtesy of Freepik from www.flaticon.com-->
+
 	<title>ExeSearch</title>
+	<link rel="stylesheet" href="style.css">
 	
 </head>
 
@@ -17,102 +19,117 @@
 
 <body>
     <style>
-        #frame001 {
-            background-color: white;
-            border: 2px solid black;
-            border-radius: 10px;
-            width: auto;
-            height: auto;
-            padding: 5px;
-        }
+    #navigationBar a {
+  	    color: #edffee;
+  	    text-decoration: none;
+  	    padding-right: 60px;
 
-        #color001 {
-            color: black;
-            font-size: large;
-            text-align: left;
-        }
+  	}
 
-        #center001 {
-            text-align: center;
-        }
+  	#navigationBar ul {
+  	    margin: 0px;
+  	    padding: 0px;
+  	    list-style: none;
+        display: block;
+  	}
 
-        .submitbutton {
-            background-color: blue;
-            color: white;
-            border-radius: 10px;
-            padding: 5px;
-            cursor: pointer;
-        }
-        .nextbutton {
-            background-color: blue;
-            color: white;
-            border-radius: 10px;
-            padding: 5px;
-            cursor: pointer;
-        }
+    #navigationBar ul li {
+   	    float: left;
+   	    width: 25%;
+   	    height: 40px;
+   	    line-height: 40px;
+   	    text-align: center;
+   	    background-color: #edffee;
+   	    border-top: 2px #edffee solid;
+   	    border-bottom: 2px #edffee solid;
+   	    border-radius: 15px;
+   	    margin-bottom: 1px;
+   	}
 
-        .button002 {
-            width: 10px;
-            height: 10px;
-        }
-		
-		ul {
-		  list-style-type: none;
-		  margin: 0;
-		  padding: 0;
-		  overflow: hidden;
-		  background-color: #333;
-		}
+  	#navigationBar ul li a {
+        display: block;
+        opacity: 0;
+  	}
 
-		li {
-		  float: left;
-		}
+  	#navigationBar ul li:hover ul li {
+  	    display: block;
+  	}
 
-		li a {
-		  display: block;
-		  color: white;
-		  text-align: center;
-		  padding: 14px 16px;
-		  text-decoration: none;
-		}
-        
-		li a:hover {
-		  background-color: #111;
-		}
-		
- 		.active {
-		background-color: #4CAF50;
-		}
+  	#navigationBar li.profile-icon {
+  	    background-image: url("profile.png");
+  	    background-size: contain;
+  	    background-repeat: no-repeat;
+  	    background-position: center;
+
+  	}
+
+  	#navigationBar li.quiz-icon {
+  	    background-image: url("quiz.png");
+  	    background-size: contain;
+  	    background-repeat: no-repeat;
+  	    background-position: center;
+  	}
+
+  	#navigationBar li.scoreb-icon {
+  	    background-image: url("scoreboard.png");
+  	    background-size: contain;
+  	    background-repeat: no-repeat;
+  	    background-position: center;
+  	}
+
+  	#navigationBar li.faq-icon {
+  	    background-image: url("faq.png");
+  	    background-size: contain;
+  	    background-repeat: no-repeat;
+  	    background-position: center;
+  	}
 		
     </style>
 	
-	<!--Yashaswi added this navigation bar-->
-	<ul>
-    <li><a href="profile.html">Profile</a></li>
-	<li><a href="quiz.html">Quiz</a></li>
-    <li><a href="scoreboard.html">Scoreboard</a></li>
-	<li><a href="faq.html">FAQ</a></li></ul>
+<h1>ExeSearch</h1>
+
 	
+<nav id="navigationBar">
+  <ul>
+    <li class="profile-icon"><a href="profile.html">Profile</a></li>
+    <li class="quiz-icon"><a href="quiz.html">Quiz</a></li>
+    <li class="scoreb-icon"><a href="scoreboard.html">Scoreboard</a></li>
+    <li class="faq-icon"><a href="FAQ.html">FAQ</a></li>
+  </ul>
+</nav>
+
+<h2>Treasure Hunt</h2>
 	
-    <div id="frame001">
-        <div id="color001">
-            <div id="center001">
-                <h2><strong>EXESEARCH QUIZ</strong></h2>
-		      <!-- Questions for the quiz-->
-<div class="questions">Question 1: Which building in the University of Exeter has a tradition of putting a lit Christmas tree on top of it in December?<input id="input001" size="15" /><text class="button002" id="check001"></text><img src="pbtree.png" alt="Physics Building Christmas Tree">
-</div><div class="questions">Question 2: To what group does the University of Exeter belong?<input id="input002" size="15" /><text class="button002" id="check002"></text>
-</div><div class="questions">Question 3: What is the University of Exeter students' radio station called?<input id="input003" size="15" /> <text class="button002" id="check003"></text>
-</div><div class="questions">Question 4: To promote Employability, the University of Exeter promotes something called The _______ Award.<input id="input004" size="15" /><text class="button002" id="check004"></text>
-</div><div class="questions">Question 5: In what year did University College of the South West of England receive its Royal Charter and become the University of Exeter?<input id="input005" size="15" /><text class="button002" id="check005"></text>
-  </div><div id="center001"><button class="submitbutton" onclick="submitclick()">Submit</button></div><br/> <!-- Submit answer button -->
-            <div id="disappear001"><div id="center001"><button class="nextbutton" onclick="submit003()">Next</button></div></div><br/> <!-- disappear001 id causes the next button to disappear when the game is finished-->
-            <div id="center001"><p id="message001"></p><p id="reload001"></p></div>
-            <div id="center001"><button class= "geoclicker" onclick= "getLocation()">WHERE AM I ?!?! </button></div>
-                <br />
-                  <p id="locations"></p>
-            <br />
-            </div>
+<div id="frame001">
+  <div id="color001">
+    <div id="center001">
+
+      <div class="questions">Question 1: Which building in the University of Exeter has a tradition of putting a lit Christmas tree on top of it in December?
+        <input id="input001" size="15"/>
+        <text class="button002" id="check001"></text>
+      </div>
+      <img src="pbtree.png" alt="Physics Building Christmas Tree">
+
+      <div class="questions">Question 2: To what group does the University of Exeter belong?
+        <input id="input002" size="15" /><text class="button002" id="check002"></text></div>
+
+      <div class="questions">Question 3: What is the University of Exeter students' radio station called?
+        <input id="input003" size="15" /> <text class="button002" id="check003"></text></div>
+
+      <div class="questions">Question 4: To promote Employability, the University of Exeter promotes something called The _______ Award.
+        <input id="input004" size="15" /><text class="button002" id="check004"></text></div>
+
+      <div class="questions">Question 5: In what year did University College of the South West of England receive its Royal Charter and become the University of Exeter?
+        <input id="input005" size="15" /><text class="button002" id="check005"></text></div>
+
+      <div id="center001"><button class="submitbutton" onclick="submitclick()">Submit</button></div><br/>
+      <div id="disappear001"><div id="center001"><button class="nextbutton" onclick="submit003()">Next</button></div></div><br/>
+      <div id="center001"><p id="message001"></p><p id="reload001"></p></div>
+      <div id="center001"><button class= "geoclicker" onclick= "getLocation()">WHERE AM I ?!?! </button></div>
+
+      <br /><p id="locations"></p><br />
     </div>
+  </div>
 
 
     <script>
