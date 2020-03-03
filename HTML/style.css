@@ -404,3 +404,76 @@ h2{
 	}
 
 }
+.leaderBoard table{
+	margin-left: 20%;
+	height: 200px;
+	color:#adde82;
+	font-size:20px;
+ }
+
+nav a {
+	color: #edffee;
+	text-decoration: none;
+	padding-right: 60px;
+}
+
+nav ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	display: block;
+}
+
+nav ul li {
+	float: left;
+	width: 25%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background-color: #edffee;
+	border-top: 2px #edffee solid;
+	border-bottom: 2px #edffee solid;
+	border-radius: 15px;
+	margin-bottom: 1px;
+}
+
+nav ul li a {
+	display: block;
+	opacity: 0;
+}
+
+nav ul li:hover ul li {
+	display: block;
+}
+
+nav li.profile-icon {
+	background-image: url("profile.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+nav li.quiz-icon {
+	background-image: url("quiz.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+nav li.scoreb-icon {
+	background-image: url("scoreboard.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+nav li.faq-icon {
+	background-image: url("faq.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.active {
+	background-color: #4CAF50;
+}
