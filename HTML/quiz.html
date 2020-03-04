@@ -1,3 +1,12 @@
+<?php
+session_start();
+//Conntribution by Ridita
+// Check user login or not
+if(!isset($_SESSION['username'])){
+   header("Location:index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" xmlns="https://www.w3.org/1999/xhtml">
 <head>
@@ -6,7 +15,7 @@
 	<meta charset="utf-8">
     <meta name="description" content="Quiz Page">
     <meta name="author" content="Jacob">
-	<meta name="contributors" content="Nell,Sophie,Yashaswi">
+	<meta name="contributors" content="Nell,Sophie,Yashaswi,Ridita">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--Icons courtesy of Freepik from www.flaticon.com-->
 
