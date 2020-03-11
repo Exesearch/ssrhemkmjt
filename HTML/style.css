@@ -1,10 +1,20 @@
 @import "compass/css3";
 
-/*	
+/*
 This is the css for the login and registation page	This is the css for the login and registation page
-Author: Ridita	Author: Ridita and Sophie
-Contributor: Sophie	
+Author: Ridita and Sophie
+Contributor: Sophie
 */
+
+/*Logo*/
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	max-width: 1000px;
+}
+
 
 /*Static table example used for this website courtesy of https://colorlib.com/wp/template/fixed-header-table/*/
 * {
@@ -410,6 +420,8 @@ h2{
 	color:#adde82;
 	font-size:20px;
  }
+
+/*Styling for the navigation bar*/
 
 nav a {
 	color: #edffee;
