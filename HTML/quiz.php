@@ -2,9 +2,6 @@
 require("./connection.php");
 session_start();
 
-$game_name = $_SESSION['vargame'];
-$location = $_SESSION['varlocation'];
-$user = $_SESSION['username'];
 
 
 $sql="SELECT qnid, question, answer, points FROM questions;";
