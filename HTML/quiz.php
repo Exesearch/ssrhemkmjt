@@ -68,7 +68,6 @@ $score_val = mysqli_query($conn, "SELECT points FROM $game_name WHERE quid = $cu
 <nav id="navigationBar">
   <ul>
     <li class="profile-icon"><a href="profile.html">Profile</a></li>
-    <li class="quiz-icon"><a href="quiz.html">Quiz</a></li>
     <li class="scoreb-icon"><a href="scoreboard.php">Scoreboard</a></li>
     <li class="faq-icon"><a href="FAQ.html">FAQ</a></li>
   </ul>
@@ -99,38 +98,6 @@ $score_val = mysqli_query($conn, "SELECT points FROM $game_name WHERE quid = $cu
 
 
     <script>
-
-    $questions = $('.questions');
-    $('.questions').fadeOut();
-    $questions.hide();
-    var totalQuestions = $('.questions').size();
-    var currentQuestion = 0;
-    $('.nextbutton').hide();
-    $('.geoclicker').hide();
-    $('#locations').hide();
-    $($questions.get(currentQuestion)).fadeIn();
-    <?php foreach($rows as $row){ ?>
-      <?php
-        echo "var an".$row['qnid']." = 0;";
-        echo "var tryv".$row['qnid']." = 6;";
-        echo "var qp".$row['qnid']."=".$row['points'].";";
-        ?>
-        <?php } ?>
-	var distance;			//Distance between user location and target
-	var userLat;			//User location latitude
-	var userLatRadians;		//In radians
-	var userLong;			//User location longitude
-	var userLongRadians;		//In radians
-	var targetLat = 0;		//The target latitude
-	var targetLatRadians;		//In radians
-	var targetLong = 0;		//The target longitude
-	var targetLongRadians;		//In radians
-	var longDifference;		//The difference between user and target longitude
-        var radius = 0;
-        var currscore = 0;
-
-        var x = document.getElementById("locations");
-
 
         function submitclick() {
 
@@ -166,6 +133,10 @@ $score_val = mysqli_query($conn, "SELECT points FROM $game_name WHERE quid = $cu
             ?>
             <?php } ?>
 
+            if (an1 == 5) {
+                message001.innerHTML = "Congratulation! You have successfully finished this quiz.";
+                disappear001.innerHTML = "";
+                reload001.innerHTML = "<div id=center001><button class=submitbutton onclick=repeat001()>Repeat</button></div>";
 
 
 
