@@ -2,6 +2,7 @@
 session_start();
 $conn = mysqli_connect("emps-sql.ex.ac.uk","yk326","yk326","yk326","3306");
 
+
 // Check user login or not
 if(!isset($_SESSION['username'])){
     header('Location: profile.php');
@@ -15,14 +16,14 @@ if(!isset($_SESSION['username'])){
     <!--Metadata-->
     <meta charset="utf-8">
     <meta name="description" content="Profile Page">
-    <meta name="author" content="Yashaswi Karmacharya, Sophie Selgrad">
+    <meta name="author" content="Yashaswi">
+    <meta name="contributors" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Profile</title>
 </head>
-
-<body>
-
-<img src= "lightgreen.png" alt="ExeSearch" class="logo">
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<h1>ExeSearch</h1>
 
 <!--Yashaswi added this navigation bar-->
 <nav>
@@ -86,6 +87,8 @@ if(!isset($_SESSION['username'])){
 
                     }elseif(mysqli_num_rows($do_query0)>0){
                         while($row = mysqli_fetch_assoc($do_query0)){
+														$_SESSION['vargame'] = $row['game_name'];
+														$_SESSION['varlocation'] = "l".$row['game_name'];
 
                             echo $row['game_name']." ";
                             echo '<button type="button" name="ready" action="profile_action.php">Ready</button>';
@@ -105,11 +108,8 @@ if(!isset($_SESSION['username'])){
                 </div>
 
             </form>
-            </div></div></div>
 
-            <div id="frame001">
-                <div id="center001">
-                    <div id ="color001">
+
 
             <form class="profile1" action="profile_action.php" method="POST">
 
@@ -166,13 +166,31 @@ if(!isset($_SESSION['username'])){
 
 
             </br>
-            <form action="logout.php">
-              <button type="submit">Logout</button>
-            </form>
+            <a href="logout.php">Logout</a>
+
         </div>
     </div>
 </div>
 
+<script>
+$(document).ready(function(){
+  var socket = io();
+  // listen to server events related to messages coming from other users. Call this event "newClick"
+  socket.on('newClick', function(msg){
+    console.log("got new click: " + msg);
+  });
+
+  // when clicked, do some action
+  $('.fireGroup').on('click', function(){
+    var linkClicked = 'groupName - ' + $(this).attr('groupName');
+    console.log(linkClicked);
+    // emit from client to server
+    socket.emit('linkClicked', linkClicked);
+    return false;
+  });
+
+});
+</script>
 
 
 </body>
