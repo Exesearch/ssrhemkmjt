@@ -15,17 +15,14 @@ if(!isset($_SESSION['username'])){
     <!--Metadata-->
     <meta charset="utf-8">
     <meta name="description" content="Profile Page">
-    <meta name="author" content="Yashaswi">
-    <meta name="contributors" content="">
+    <meta name="author" content="Yashaswi Karmacharya, Sophie Selgrad">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Profile</title>
 </head>
 
 <body>
 
-<img src= "lightgreen.png" alt="ExeSearch" class=".logo">
-
-<h1>ExeSearch</h1>
+<img src= "lightgreen.png" alt="ExeSearch" class="logo">
 
 <!--Yashaswi added this navigation bar-->
 <nav>
@@ -108,8 +105,11 @@ if(!isset($_SESSION['username'])){
                 </div>
 
             </form>
+            </div></div></div>
 
-
+            <div id="frame001">
+                <div id="center001">
+                    <div id ="color001">
 
             <form class="profile1" action="profile_action.php" method="POST">
 
@@ -166,8 +166,9 @@ if(!isset($_SESSION['username'])){
 
 
             </br>
-            <a href="logout.php">Logout</a>
-
+            <form action="logout.php">
+              <button type="submit">Logout</button>
+            </form>
         </div>
     </div>
 </div>
