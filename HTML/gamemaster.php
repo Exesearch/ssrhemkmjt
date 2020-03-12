@@ -8,10 +8,10 @@
     <meta name="author" content="Sophie Selgrad">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--Icons courtesy of Freepik from www.flaticon.com-->
     <link rel="stylesheet" href="style.css">
 </head>
 
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript" href="quiz.js"></script>
 
 <body>
@@ -26,14 +26,15 @@
     </ul>
 </nav>
 
-<h1>Gamemaster Page</h1>
+<h2> Gamemaster Page </h2>
 
 <div id="frame001">
     <div id="center001">
         <div id ="color001">
 
+            <!--Allows gamemaster to create a new game-->
             <h3> Create Game</h3>
-        <form class= "game-form" action= "create_game.php" method = "POST">
+            <form class= "game-form" action= "create_game.php" method = "POST">
 
             <label>Enter Game Name:</label>
             <input type="text" id="game_name" name="game_name" placeholder="Game Name" required>
@@ -45,9 +46,9 @@
                     <option value="">Choose Location</option>
                     <option value="Cornwall">Cornwall House</option>
                     <option value="Forum">Forum</option>
-                    <option value="Harrisons">Harrisons Building</option>
+                    <option value="Harrison">Harrison Building</option>
                     <option value="Northcott">NorthCott Theatre</option>
-                    <option value="GreatHall">Great Hall</option>
+                    <option value="Great Hall">Great Hall</option>
                     <option value="Amory">Amory Building</option>
                 </select>
             </label>
@@ -57,25 +58,25 @@
             <!--Locations drop down-->
             <div class="pc-row location-1">
 
-                <h3>Choose location below</h3>
+                <h3>Choose locations below</h3>
                 <label for="location_one"><span>Location 1</span>
                     <select name="location_1" class="linked-drop-down">
                         <option value="">Choose Location</option>
                         <option value="Cornwall">Cornwall House</option>
                         <option value="Forum">Forum</option>
-                        <option value="Harrisons">Harrisons Building</option>
+                        <option value="Harrison">Harrison Building</option>
                         <option value="Northcott">NorthCott Theatre</option>
-                        <option value="GreatHall">Great Hall</option>
+                        <option value="Great Hall">Great Hall</option>
                         <option value="Amory">Amory Building</option>
                     </select>
                 </label>
 
                 <div class="locations-colors pc-col quote-sizes">
                     <label for = "question_one">
-                        <h4>Set questions and answers below</h4>
-                        <span> Question 1: </span>
+                        <h3>Set questions and answers below</h3>
+                        <span><h4> Question 1: </h4></span>
                         <input type="text" name ="qns1" placeholder = "Question 1" id= "qns1" >
-                        <input type="text" name = "ans1"  placeholder = "Answer 1" id = "ans1" onkeyup="this.value = this.value.toUpperCase();">
+                        <input type="text" name = "ans1"  placeholder = "Answer 1" id = "ans1">
                     </label>
                     </br>
                     <label for = "point_one"><span> Points for Q1: </span>
@@ -90,14 +91,14 @@
                         <option value="">choose location</option>
                         <option value="Cornwall">Cornwall House</option>
                         <option value="Forum">Forum</option>
-                        <option value="Harrisons">Harrisons Building</option>
+                        <option value="Harrison">Harrison Building</option>
                         <option value="Northcott">NorthCott Theatre</option>
-                        <option value="GreatHall">Great Hall</option>
+                        <option value="Great Hall">Great Hall</option>
                         <option value="Amory">Amory Building</option>
                     </select>
                 </label>
-                <div class="locations-colors pc-col quote-sizes"><label for = "question_two"><span> Question 2: </span>
-                        <input type="text" name ="qns2" placeholder = "Question 2" id= "qns2"  > <input type="text" name = "ans2" placeholder = "Answer 2" id = "ans2" onkeyup="this.value = this.value.toUpperCase();">
+                <div class="locations-colors pc-col quote-sizes"><label for = "question_two"><span><h4> Question 2: </h4></span>
+                        <input type="text" name ="qns2" placeholder = "Question 2" id= "qns2"  > <input type="text" name = "ans2" placeholder = "Answer 2" id = "ans2">
                     </label>
                     </br>
                     <label for = "point_two"><span> Points for Q2: </span>
@@ -113,14 +114,14 @@
                         <option value="">choose location</option>
                         <option value="Cornwall">Cornwall House</option>
                         <option value="Forum">Forum</option>
-                        <option value="Harrisons">Harrisons Building</option>
+                        <option value="Harrison">Harrison Building</option>
                         <option value="Northcott">NorthCott Theatre</option>
-                        <option value="GreatHall">Great Hall</option>
+                        <option value="Great Hall">Great Hall</option>
                         <option value="Amory">Amory Building</option>
                     </select>
                 </label>
-                <div class="locations-colors pc-col quote-sizes"><label for = "question_three"><span> Question 3: </span>
-                        <input type="text" name ="qns3" placeholder = "Question 3" id= "qns3"  > <input type="text" name = "ans3" placeholder = "Answer 3" id = "ans3" onkeyup="this.value = this.value.toUpperCase();">
+                <div class="locations-colors pc-col quote-sizes"><label for = "question_three"><span><h4> Question 3: </h4></span>
+                        <input type="text" name ="qns3" placeholder = "Question 3" id= "qns3"  > <input type="text" name = "ans3" placeholder = "Answer 3" id = "ans3">
                     </label>
                     </br>
                     <label for = "point_three"><span> Points for Q3: </span>
@@ -136,14 +137,14 @@
                         <option value="">choose location</option>
                         <option value="Cornwall">Cornwall House</option>
                         <option value="Forum">Forum</option>
-                        <option value="Harrisons">Harrisons Building</option>
+                        <option value="Harrison">Harrison Building</option>
                         <option value="Northcott">NorthCott Theatre</option>
-                        <option value="GreatHall">Great Hall</option>
+                        <option value="Great Hall">Great Hall</option>
                         <option value="Amory">Amory Building</option>
                     </select>
                 </label>
-                <div class="locations-colors pc-col quote-sizes"><label for = "question_four"><span> Question 4: </span>
-                        <input type="text" name ="qns4" placeholder = "Question 4" id= "qns4"  > <input type="text" name = "ans4" placeholder = "Answer 4" id = "ans4" onkeyup="this.value = this.value.toUpperCase();">
+                <div class="locations-colors pc-col quote-sizes"><label for = "question_four"><span><h4> Question 4: </h4></span>
+                        <input type="text" name ="qns4" placeholder = "Question 4" id= "qns4"  > <input type="text" name = "ans4" placeholder = "Answer 4" id = "ans4">
                     </label>
                     </br>
                     <label for = "point_three"><span> Points for Q4: </span>
@@ -159,14 +160,14 @@
                         <option value="">choose location</option>
                         <option value="Cornwall">Cornwall House</option>
                         <option value="Forum">Forum</option>
-                        <option value="Harrisons">Harrisons Building</option>
+                        <option value="Harrison">Harrison Building</option>
                         <option value="Northcott">NorthCott Theatre</option>
-                        <option value="GreatHall">Great Hall</option>
+                        <option value="Great Hall">Great Hall</option>
                         <option value="Amory">Amory Building</option>
                     </select>
                 </label>
-                <div class="locations-colors pc-col quote-sizes"><label for = "question_five"><span> Question 5: </span>
-                        <input type="text" name ="qns5" placeholder = "Question 5" id= "qns5"  > <input type="text" name = "ans5" placeholder = "Answer 5" id = "ans5" onkeyup="this.value = this.value.toUpperCase();">
+                <div class="locations-colors pc-col quote-sizes"><label for = "question_five"><span><h4> Question 5: </h4></span>
+                        <input type="text" name ="qns5" placeholder = "Question 5" id= "qns5"  > <input type="text" name = "ans5" placeholder = "Answer 5" id = "ans5">
                     </label>
                     </br>
                     <label for = "point_four"><span> Points for Q5: </span>
@@ -177,10 +178,11 @@
 
             <br />
 
-            <div id="add-location"><a href="javascript:void(0);" class="addonemore">Add one more location</a></div>
+            <div id="add-location"><a href="javascript:void(0);" class="addonemore">Add one more location</a></div><br>
+
             <div id="rm-location"><a href="javascript:void(0);" class="rmone">Remove one location</a></div> <br/>
 
-            <!--button that will enter the credientials into database-->
+            <!--Button that will enter the credientials into database-->
             <button type="submit" name="submit" value= "Submit"> Submit </button>
         </form>
     </div>
@@ -193,11 +195,13 @@
     var disables = {
         Cornwall: ["Cornwall"],
         Forum:["Forum"],
-        Harrisons:["Harrisons"],
+        Harrison:["Harrison"],
         Northcott:["Northcott"],
-        GreatHall:["GreatHall"],
+        Great Hall:["Great Hall"],
         Amory:["Amory"]
     }
+
+    /*Gamemaster can add between 3 and 5 locations in a game.*/
     $(".addonemore").click(function() {
         if (i > 5) {
             alert("You can add only a maximum of 5 locations");

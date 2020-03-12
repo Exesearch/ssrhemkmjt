@@ -29,9 +29,9 @@ $conn->close();
 	  <meta name="contributors" content="Sophie Selgrad, Yashaswi Karmacharya">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
 
-
-    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--Required in order to display the table correctly-->
 	  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
@@ -39,7 +39,6 @@ $conn->close();
 	  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 	  <link rel="stylesheet" type="text/css" href="util.css">
 	  <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="style.css">
 
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendor/bootstrap/js/popper.js"></script>
@@ -62,8 +61,9 @@ $conn->close();
       </ul>
   </nav>
 
-  <h2>SCOREBOARD</h2>
+  <h2>Scoreboard</h2>
 
+  <!--Lists teams, points, and rankings in a table-->
   <div class="limiter">
     <div class="container-table1">
 			<div class="wrap-table1">
