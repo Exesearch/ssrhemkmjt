@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript" href="quiz.js"></script>
 
 <body>
@@ -76,7 +75,7 @@
                         <h4>Set questions and answers below</h4>
                         <span> Question 1: </span>
                         <input type="text" name ="qns1" placeholder = "Question 1" id= "qns1" >
-                        <input type="text" name = "ans1"  placeholder = "Answer 1" id = "ans1">
+                        <input type="text" name = "ans1"  placeholder = "Answer 1" id = "ans1" onkeyup="this.value = this.value.toUpperCase();">
                     </label>
                     </br>
                     <label for = "point_one"><span> Points for Q1: </span>
@@ -98,7 +97,7 @@
                     </select>
                 </label>
                 <div class="locations-colors pc-col quote-sizes"><label for = "question_two"><span> Question 2: </span>
-                        <input type="text" name ="qns2" placeholder = "Question 2" id= "qns2"  > <input type="text" name = "ans2" placeholder = "Answer 2" id = "ans2">
+                        <input type="text" name ="qns2" placeholder = "Question 2" id= "qns2"  > <input type="text" name = "ans2" placeholder = "Answer 2" id = "ans2" onkeyup="this.value = this.value.toUpperCase();">
                     </label>
                     </br>
                     <label for = "point_two"><span> Points for Q2: </span>
@@ -121,7 +120,7 @@
                     </select>
                 </label>
                 <div class="locations-colors pc-col quote-sizes"><label for = "question_three"><span> Question 3: </span>
-                        <input type="text" name ="qns3" placeholder = "Question 3" id= "qns3"  > <input type="text" name = "ans3" placeholder = "Answer 3" id = "ans3">
+                        <input type="text" name ="qns3" placeholder = "Question 3" id= "qns3"  > <input type="text" name = "ans3" placeholder = "Answer 3" id = "ans3" onkeyup="this.value = this.value.toUpperCase();">
                     </label>
                     </br>
                     <label for = "point_three"><span> Points for Q3: </span>
@@ -144,7 +143,7 @@
                     </select>
                 </label>
                 <div class="locations-colors pc-col quote-sizes"><label for = "question_four"><span> Question 4: </span>
-                        <input type="text" name ="qns4" placeholder = "Question 4" id= "qns4"  > <input type="text" name = "ans4" placeholder = "Answer 4" id = "ans4">
+                        <input type="text" name ="qns4" placeholder = "Question 4" id= "qns4"  > <input type="text" name = "ans4" placeholder = "Answer 4" id = "ans4" onkeyup="this.value = this.value.toUpperCase();">
                     </label>
                     </br>
                     <label for = "point_three"><span> Points for Q4: </span>
@@ -167,7 +166,7 @@
                     </select>
                 </label>
                 <div class="locations-colors pc-col quote-sizes"><label for = "question_five"><span> Question 5: </span>
-                        <input type="text" name ="qns5" placeholder = "Question 5" id= "qns5"  > <input type="text" name = "ans5" placeholder = "Answer 5" id = "ans5">
+                        <input type="text" name ="qns5" placeholder = "Question 5" id= "qns5"  > <input type="text" name = "ans5" placeholder = "Answer 5" id = "ans5" onkeyup="this.value = this.value.toUpperCase();">
                     </label>
                     </br>
                     <label for = "point_four"><span> Points for Q5: </span>
