@@ -2,11 +2,11 @@
 
 /*
 This is the css for the login and registation page	This is the css for the login and registation page
-Author: Ridita and Sophie
-Contributor: Sophie
+Author: Sophie Selgrad
+Contributor: Ridita Hossain
 */
 
-/*Logo*/
+/*Logo formatting*/
 .logo {
 	display: block;
 	margin-left: auto;
@@ -161,6 +161,7 @@ th, td {
   font-size: 15px;
   color: #1c7330;
   line-height: 1.4;
+  text-align: center;
 }
 
 .table1.ver1 .table1-body tr:nth-child(even) {
@@ -192,9 +193,7 @@ th, td {
 /*Quiz page formatting*/
 
 body{
-	background-image: linear-gradient(rgba(0,50,0,0.6),rgba(0, 0, 0, 0.5)),url(treasure.jfif);
-	height:100vh;
-	background-size: cover;
+	background-image: url(tile.png);
 	background-position:center;
 }
 
@@ -202,17 +201,22 @@ body{
 	background-color: #a8efab75;
 	width: 80%;
 	height: auto;
-	padding: 5px;
-	position: relative;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 10px;
+  padding-top: 10px;
+	position: inherit;
 	z-index:1;
-	margin:0 auto 100px;
+	margin: 0 auto 100px;
+	margin-bottom: 15px;
 	text-align:center;
+	border-radius: 10px;
 }
 
 #color001 {
 		color: #d2f2d3;
 		font-family: 'Muli', sans-serif;
-		font-size: large;
+		font-size: 18px;
 		text-align: left;
 }
 
@@ -220,32 +224,45 @@ body{
 		text-align: center;
 }
 
-img {
-	width: 70%;
-	max-width: 500px;
-	/* padding:5px; */
-	border: 10px solid;
-	border-image: radial-gradient(#aee250, #295232) 1;
-	border-radius: 0px;
-	/* background-color: #e6e6e6; */
-}
+/*Different headings*/
 
 h1{
 	display:block;
-	color:#adde82;
+	color:#adde82 !important;
 	font-size:46px;
 	text-align:center;
-	font-family: 'Muli', sans-serif;
-	margin-top:66px;
+	font-family: 'Muli', sans-serif !important;
+	margin-top:5px;
 }
 
 h2{
 	display:block;
-	color:#adde82;
+	color:#adde82 !important;
 	font-size:36px;
 	text-align:center;
-	font-family: 'Muli', sans-serif;
-	margin-top:66px;
+	font-family: 'Muli', sans-serif !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: bold !important;
+}
+
+h3{
+	display:block;
+	color:#adde82 !important;
+	font-size:26px;
+	font-family: 'Muli', sans-serif !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h4{
+	display: inherit;
+	color:#adde82 !important;
+	font-size: 18px;
+	font-family: 'Muli', sans-serif !important;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-weight: bold !important;
 }
 
 /*Login/registration page formatting*/
@@ -264,7 +281,7 @@ h2{
 	margin:0 auto 100px;
 	padding:45px;
 	text-align:center;
-
+	border-radius: 10px;
 }
 
 .form input{
@@ -280,19 +297,17 @@ h2{
 
 .form button{
 	font-family: "Roboto", sans-serif;
-	text-transform:uppercase;
-	outline:0;
-	background:#236325;
-	width:100%
-	border:0;
-	padding:15px;
-	color:#ffffff;
+	padding:10px;
 	font-size:14px;
 	cursor:pointer;
+	color: #295232;
+	background-color: #adde82d6;
+	border-radius: 10px;
+	margin-top: 5px;
 }
 
 .form button:hover,.form button:active{
-	background:#43A047;
+	background:#adde82;
 }
 
 .form .message{
@@ -311,8 +326,39 @@ h2{
 	display:none;
 
 /*Buttons for quiz page*/
+button {
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out,
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 
-.submitbutton {
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+button.submitbutton {
 			background-color: blue;
 			color: white;
 			border-radius: 10px;
@@ -320,12 +366,11 @@ h2{
 			cursor: pointer;
 	}
 
-.nextbutton {
-			background-color: blue;
-			color: white;
-			border-radius: 10px;
-			padding: 5px;
-			cursor: pointer;
+
+button.nextbutton {
+	    color: black;
+	    background-color: #adde82b5;
+	    border-radius: 10px;
 	}
 
 .button002 {
@@ -334,7 +379,7 @@ h2{
 	}
 
 
-/*leaderBoard table*/
+/*Score Board table*/
 
 .leaderBoard {
 	margin: 1em 0;
@@ -422,7 +467,7 @@ h2{
  }
 
 /*Styling for the navigation bar*/
-
+/*Icons courtesy of Freepik from www.flaticon.com*/
 nav a {
 	color: #edffee;
 	text-decoration: none;
@@ -438,7 +483,7 @@ nav ul {
 
 nav ul li {
 	float: left;
-	width: 25%;
+	width: 33.3%;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
@@ -465,8 +510,8 @@ nav li.profile-icon {
 	background-position: center;
 }
 
-nav li.quiz-icon {
-	background-image: url("quiz.png");
+nav li.faq-icon {
+	background-image: url("faq.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -479,13 +524,55 @@ nav li.scoreb-icon {
 	background-position: center;
 }
 
-nav li.faq-icon {
-	background-image: url("faq.png");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
 .active {
 	background-color: #4CAF50;
+}
+
+/*Styling for Gamemaster table*/
+.pc-row {
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+}
+
+.pc-col {
+		display: table-cell;
+		vertical-align: top
+}
+
+.location-4,
+.location-5,
+.location-6
+{
+		display: none
+}
+
+#add-location,
+#rm-location, {
+		margin: 20px 0;
+		width: 160px;
+		float: left
+}
+
+#rm-location {
+		width: auto
+}
+
+#add-location a, #rm-location a {
+		text-decoration: none;
+		color: #17490b;
+		font-size: 13px;
+		padding: 5px;
+		background-color: #adde82;
+		border-radius: 10px;
+    margin-right: 10px;
+
+}
+
+/*Styling for map in FAQ page*/
+.Map {
+	border: 2px solid #ADDE82;
+	width: 90%;
+	height: 604px;
+	margin: auto;
 }
