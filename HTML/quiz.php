@@ -7,7 +7,7 @@ $location = $_SESSION['varlocation'];
 $user = $_SESSION['username'];
 
 
-$sql="SELECT * FROM questions;";
+$sql="SELECT qnid, question, answer, points FROM questions;";
 
 $result = mysqli_query($conn, $sql);
 if ($result->num_rows>0) {
@@ -18,7 +18,7 @@ if ($result->num_rows>0) {
   echo "Empty data" . "<br/>";
 }
 
-$lsql = "SELECT * FROM locations;";
+$lsql = "SELECT locid, locname, loclong, loclat, clue, locrad FROM locations;";
 $lresult = mysqli_query($conn, $lsql);
 if ($lresult->num_rows>0) {
   while ($lrow=$lresult->fetch_assoc()) {
@@ -28,17 +28,6 @@ if ($lresult->num_rows>0) {
   echo "Empty data" . "<br/>";
 }
 
-$lastloc = mysqli_query($conn, "SELECT MAX(locid) FROM locations;");
-$team_id = mysqli_query($conn, "SELECT groupName FROM team WHERE member1='$username' OR member2='$username' OR member3='$username'
-                    OR member4='$username' OR member5='$username' OR member6='$username' OR member7='$username' OR member8='$username'
-                    OR member9='$username' OR member10='$username';");
-
-//$current_question_query = "SELECT team_id from $game_name WHERE $team_id = TRUE;";
-//$current_question_result = mysqli_query($conn, $current_question_query);
-//$current_question = fetch_assoc($current_question_result);
-$current_question = 1;
-
-$score_val = mysqli_query($conn, "SELECT points FROM $game_name WHERE quid = $current_question;");
 
 
  ?>
@@ -68,6 +57,7 @@ $score_val = mysqli_query($conn, "SELECT points FROM $game_name WHERE quid = $cu
 <nav id="navigationBar">
   <ul>
     <li class="profile-icon"><a href="profile.html">Profile</a></li>
+    <li class="quiz-icon"><a href="quiz.html">Quiz</a></li>
     <li class="scoreb-icon"><a href="scoreboard.php">Scoreboard</a></li>
     <li class="faq-icon"><a href="FAQ.html">FAQ</a></li>
   </ul>
@@ -97,7 +87,7 @@ $score_val = mysqli_query($conn, "SELECT points FROM $game_name WHERE quid = $cu
 <p id = "saveWarningText"></p>
 
 
-  <script>
+    <script>
 
     $questions = $('.questions');
     $('.questions').fadeOut();
@@ -164,6 +154,13 @@ $score_val = mysqli_query($conn, "SELECT points FROM $game_name WHERE quid = $cu
 
             ?>
             <?php } ?>
+
+            if (an1 == 5) {
+                message001.innerHTML = "Congratulation! You have successfully finished this quiz.";
+                disappear001.innerHTML = "";
+                reload001.innerHTML = "<div id=center001><button class=submitbutton onclick=repeat001()>Repeat</button></div>";
+
+
 
               }
         }
