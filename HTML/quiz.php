@@ -1,5 +1,5 @@
 <?php
-require("./connection.php");
+$conn = mysqli_connect("emps-sql.ex.ac.uk","yk326","yk326","yk326");
 session_start();
 
 
